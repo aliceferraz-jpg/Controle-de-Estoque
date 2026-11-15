@@ -136,20 +136,24 @@ while (item[i] != '\0' || nomeArquivo[i] != '\0') {
 
 if (iguais == 1) {
     encontrado = 1;
+
     if (quantidade > quantidadeArquivo) {
         printf("Estoque insuficiente! Disponível: %d\n", quantidadeArquivo);
         fprintf(temporario, "%s\n%d\n", nomeArquivo, quantidadeArquivo);
+
     } else {
         quantidadeArquivo = quantidadeArquivo - quantidade;
-        printf("Quantidade restante: %d\n", quantidadeArquivo);
 
         if (quantidadeArquivo > 0) {
+            printf("Estoque atualizado com sucesso! Quantidade restante: %d\n", quantidadeArquivo);
             fprintf(temporario, "%s\n%d\n", nomeArquivo, quantidadeArquivo);
+
+        } else {
+            printf("Produto removido do estoque! O saldo chegou a zero.\n");
         }
     }
-}
 
-else {
+} else {
     fprintf(temporario, "%s\n%d\n", nomeArquivo, quantidadeArquivo);
 }
 }
