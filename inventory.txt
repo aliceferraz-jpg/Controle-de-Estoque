@@ -1,0 +1,12 @@
+Caneta Azul
+5
+Bola
+8
+Papel
+35
+Bazuca
+5
+Carregador
+5
+Bala
+17
